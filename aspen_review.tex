@@ -1,0 +1,178 @@
+\documentclass[aps,nofootinbib,groupedaddress]{revtex4}
+
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb,amstext,amssymb,amsfonts,amsthm}
+\usepackage{hyperref}
+\usepackage{appendix}
+\usepackage[margin=1.0in,papersize={8.5in,11in}]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{soul}
+\usepackage{color}
+
+\newcommand{\apjl}{Astrophys. J. Lett.}
+\newcommand{\aap}{Astron. Astrophys.}
+\newcommand{\apjs}{Astrophys. J. Suppl. Ser.}
+\newcommand{\sa}{Sov. Astron.}
+\newcommand{\jpb}{J. Phys. B.}
+\newcommand{\natu}{Nature (London)}
+\newcommand{\aaps}{Astron. Astrophys. Supp. Ser.}
+\newcommand{\aj}{Astron. J.}
+\newcommand{\aas}{Bull. Am. Astron. Soc.}
+\newcommand{\mnras}{Mon. Not. R. Astron. Soc.}
+\newcommand{\jcap}{J. Cosm. Astropart. Phys.}
+\newcommand{\pasp}{Publ. Astron. Soc. Pac.}
+\newcommand{\memras}{Mem. R. Astr. Soc. }
+\newcommand{\physrep}{Phys. Rep.}
+
+\newcommand{\jc}[1]{{\color[rgb]{0.0,0.7,0.7} {\sf[#1]}}}
+\newcommand{\mcj}[1]{{\color[rgb]{1.0,0.,0.0} {\sf[#1]}}}
+\newcommand{\dc}[1]{{\color[rgb]{1.0,0.5,0.0} {\sf[#1]}}}
+\newcommand{\sch}[1]{{\color[rgb]{0.3,0.4,0.5} {\sf[#1]}}}
+\newcommand{\rb}[1]{{\color[rgb]{0.0,1.0,0.0} {\sf[#1]}}}
+
+\usepackage{tabularx}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}
+
+\def\eqref#1{(\ref{#1})}
+
+\begin{document}
+
+\title{New discoveries in the era of low noise high resolution CMB experiments}
+
+
+
+\date{\today}
+
+\begin{abstract}
+This paper attempts to lay out the implications of near-term CMB experiments with low noise and high resolution. We begin with a review of the effects present on small angular scales in Gigahertz observations of the microwave sky, including primary and secondary CMB anisotropies as well as galactic and extragalactic foregrounds. We review techniques for extracting cosmological information from the small-scale CMB and 
+\end{abstract}
+
+\maketitle
+
+\tableofcontents
+
+
+
+\section{Introduction}
+
+\section{The primary CMB temperature anisotropies}
+
+\section{Secondary CMB temperature anisotropies}
+
+\subsection{CMB lensing}
+
+\subsection{ISW effects}
+
+Integrated Sachs Wolfe:
+\begin{equation}
+\Theta^T = -2\int d\chi \ \frac{d \Psi}{d\chi}
+\end{equation}
+\begin{itemize}
+\item Linear ISW: straightforward in CMB, what are the best cross-correlations?
+\item Non-linear ISW: moving-lens, Rees-Sciama - clear up the differences in terminology and distinction between different physical effects. What are the best things to cross-correlate with? Reconstruction vs stacking. What is the strongest science case - optical depth degeneracy, large scale modes, etc? Relativistic considerations: how does a pure gradient mode show up in moving lens?
+\end{itemize}
+
+\subsection{Sunyaev Zel'dovich effects}
+
+Sunyaev Zel'dovich effects (to quadratic order in temperature and velocity):
+\begin{equation}
+\delta f = -\int d\chi \ \dot{\tau} e^{-\tau} \ \mathcal{S}
+\end{equation}
+\begin{eqnarray}
+\mathcal{S} &=& \mathbf{v} \cdot \mathbf{\hat{n}} \ \mathcal{G} + \theta_e \ \mathcal{Y} +\mathbf{v} \cdot \mathbf{\hat{n}} \ \theta_e \ \left( \frac{2}{5} \mathcal{G} - \mathcal{Y}^{(2)} + \frac{7}{5} \mathcal{Y}^{(3)} \right)  \\
+&+& \theta_e^2 \left( - \frac{3}{10} \mathcal{Y}^{(2)} - \frac{21}{10} \mathcal{Y}^{(3)} + \frac{7}{10} \mathcal{Y}^{(4)} \right) 
++ \mathbf{v} \cdot \mathbf{\hat{n}} \ \theta_e^2 \left( \frac{1}{5} \mathcal{G} - \frac{7}{10} \mathcal{Y}^{(3)} - \frac{33}{10} \mathcal{Y}^{(4)}+ \frac{11}{10} \mathcal{Y}^{(5)} \right)
+\end{eqnarray}
+where $\theta_e = T_e / m_e$, $\mathcal{G}$ is the blackbody, $\mathcal{Y}$ is the Compton y parameter, and  $\mathcal{Y}^{(n)}$ are the $n$th frequency derivatives of Compton y.
+\begin{itemize}
+\item Kinetic SZ: $\delta f = - \mathcal{G} \int d\chi \ \dot{\tau} e^{-\tau} \mathbf{v} \cdot \mathbf{\hat{n}} $ A blackbody term proportional to the radial velocity (in full, this should be the locally observed CMB dipole, so there are general relativistic corrections). Can decompose the velocity into a divergence and a curl component. The divergence gives rise to the usually discussed kSZ, and is most important since the velocity power spectrum is dominated by large scales where things are linear.The curl component gives rise to the rotational kSZ (rkSZ) effect which is relevant on smaller, non-linear scales (barring a long-range correlation in the angular momentum field). There are contributions to kSZ both from gas in clusters as well as gas in the IGM (the dominant component).
+\item Thermal SZ: $\delta f = - \mathcal{Y} \int d\chi \ \dot{\tau} e^{-\tau} \theta_e = \mathcal{Y} \int d\chi \ (a \sigma_T/m_e) e^{-\tau} (n_e T_e) = \mathcal{Y} \int d\chi \ R \ p$. This is the larges SZ effect due to the presence of hot gas in clusters. Gil - the observed tSZ is a factor of 2 smaller than expected. Can use to constrain gas physics, feedback, do cluster cosmology.... Is there another way to think about tSZ in terms of the optical depth field modulating the temperature field? The difference with kSZ is that the optical depth and temperature fields are both going to be on small angular scales; there isn't a long wavelength field modulating a short wavelength field. Is there a similar bispectrum argument for equilateral triangles as there is for squeezed triangles for kSZ?
+\item Thermal kinetic SZ: $\delta f = -\left( \frac{2}{5} \mathcal{G} - \mathcal{Y}^{(2)} + \frac{7}{5} \mathcal{Y}^{(3)} \right) \int d\chi \ \dot{\tau} e^{-\tau} \theta_e \mathbf{v} \cdot \mathbf{\hat{n}} = \left( \frac{2}{5} \mathcal{G} - \mathcal{Y}^{(2)} + \frac{7}{5} \mathcal{Y}^{(3)} \right)  \int d\chi \ R \ p \ \mathbf{v} \cdot \mathbf{\hat{n}}$. The next in line in terms of magnitude of SZ effects. Can be thought of as line of sight integral of pressure times radial velocity. Unlike kSZ, this will be dominated by the contribution from clusters.
+\item What else......
+\end{itemize}
+
+
+
+\section{CMB polarization anisotropies}
+
+
+
+\subsection{Primary CMB polarization anisotropies}
+
+\subsection{Secondary CMB polarization anisotropies}
+
+\section{The cosmic infrared background (CIB)}
+
+\section{Galactic foregrounds at high resolution}
+
+\section{Simulations of the high resolution microwave sky}
+
+\section{Aspects of the frequency-dependent microwave sky: spectral distortions}
+
+\subsection{Early-time spectral distortions}
+
+\subsection{Late-time spectral distortions}
+
+\subsection{Raleigh scattering}
+
+\section{Capabilities of existing and proposed CMB experiments}
+
+\subsection{Existing CMB experiments}
+
+\subsection{Future CMB experiments}
+
+\section{Galaxy surveys}
+
+\section{Cosmology with CMB lensing}
+
+\subsection{Lensing estimators}
+
+\subsection{Sensitivity to cosmological parameters}
+
+\subsection{Cross-correlations with LSS}
+
+\subsection{De-lensing and primordial gravitational waves}
+
+\section{Cosmology with the kSZ effect}
+
+\subsection{kSZ autopower}
+
+\subsection{Pairwise velocity estimators}
+
+\subsection{Velocity reconstruction}
+
+\section{Cosmology with the tSZ effect}
+
+\section{Cosmology with ISW effects}
+
+\section{Cosmology with other SZ effects}
+
+\subsection{Polarized SZ}
+
+\subsection{Thermal kinetic SZ}
+
+\subsection{Rotational kSZ}
+
+\subsection{$\mathcal{O}(v^2)$ SZ effects}
+
+\section{Astrophysics with the high resolution CMB}
+
+\subsection{The missing baryons}
+
+\subsection{Feedback and star formation}
+
+\section{Foreground removal for the high resolution CMB}
+
+
+
+
+\appendix
+
+\section{The halo model of large scale structure}
+
+
+
+\end{document}
+
